@@ -1,6 +1,6 @@
 {
   "name": "@vkontakte/mvk-mini-apps-scroll-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/mvk-mini-apps-scroll-helper.cjs.js",
   "module": "dist/mvk-mini-apps-scroll-helper.esm.js",
   "browser": "dist/mvk-mini-apps-scroll-helper.umd.js",
