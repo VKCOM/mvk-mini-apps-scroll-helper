@@ -1,0 +1,33 @@
+{
+  "name": "@vkontakte/mvk-mini-apps-scroll-helper",
+  "version": "1.0.0",
+  "main": "dist/mvk-mini-apps-scroll-helper.cjs.js",
+  "module": "dist/mvk-mini-apps-scroll-helper.esm.js",
+  "browser": "dist/mvk-mini-apps-scroll-helper.umd.js",
+  "umdName": "mVKMiniAppsScrollHelper",
+  "scripts": {
+    "build": "rimraf dist && NODE_ENV=production rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vk"
+  ],
+  "author": "VK.com",
+  "license": "MIT",
+  "repository": "VKCOM/mvk-mini-apps-scroll-helper",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.18.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-bundle-size": "^1.0.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-uglify": "^6.0.2"
+  }
+}
