@@ -1,16 +1,19 @@
-const PLATFORM_PARAM = 'vk_platform';
-const MOBILE_WEB = 'mobile_web';
+'use strict';
 
+var PLATFORM_PARAM = 'vk_platform';
+var MOBILE_WEB = 'mobile_web';
 /**
  * @param {HTMLElement|null} appContainerNode
  */
-const mvkScrollHelper = appContainerNode => {
+
+var mvkScrollHelper = function mvkScrollHelper(appContainerNode) {
   if (appContainerNode == null) {
     return;
   }
 
-  const searchParams = new URLSearchParams(location.search);
-  const { userAgent } = navigator;
+  var searchParams = new URLSearchParams(location.search);
+  var _navigator = navigator,
+      userAgent = _navigator.userAgent;
 
   if ((userAgent.includes('iPhone') || userAgent.includes('iPad')) && searchParams.get(PLATFORM_PARAM) === MOBILE_WEB) {
     appContainerNode.style.overflowY = 'scroll';
@@ -18,4 +21,4 @@ const mvkScrollHelper = appContainerNode => {
   }
 };
 
-export default mvkScrollHelper;
+module.exports = mvkScrollHelper;
