@@ -9,7 +9,7 @@ const mvkScrollHelper = appContainerNode => {
     return;
   }
 
-  const isMobileWeb = new RegExp(`[?&]${PLATFORM_PARAM}=${MOBILE_WEB}(&|$)`).test(location.search);
+  const isMobileWeb = location.search.indexOf(`${PLATFORM_PARAM}=${MOBILE_WEB}`) > -1;
   const { userAgent } = navigator;
 
   if ((userAgent.indexOf('iPhone') > -1 || userAgent.indexOf('iPad') > -1) && isMobileWeb) {
