@@ -12,7 +12,7 @@ const mvkScrollHelper = appContainerNode => {
   const isMobileWeb = new RegExp(`[?&]${PLATFORM_PARAM}=${MOBILE_WEB}(&|$)`).test(location.search);
   const { userAgent } = navigator;
 
-  if ((userAgent.includes('iPhone') || userAgent.includes('iPad')) && isMobileWeb) {
+  if ((userAgent.indexOf('iPhone') > -1 || userAgent.indexOf('iPad') > -1) && isMobileWeb) {
     appContainerNode.style.overflowY = 'scroll';
     appContainerNode.style.webkitOverflowScrolling = 'touch';
   }
