@@ -1,1 +1,0 @@
-export default e=>{if(e&&"string"==typeof e){const o=new URLSearchParams(window.location.search);if((~window.navigator.userAgent.indexOf("iPhone")||~window.navigator.userAgent.indexOf("iPad"))&&o.has("vk_platform")&&"mobile_web"===o.get("vk_platform")){const o=document.getElementById(e);o&&(o.style.overflowY="scroll",o.style.webkitOverflowScrolling="touch")}}};

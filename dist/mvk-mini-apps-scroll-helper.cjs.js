@@ -11,11 +11,11 @@ var mvkScrollHelper = function mvkScrollHelper(appContainerNode) {
     return;
   }
 
-  var searchParams = new URLSearchParams(location.search);
+  var isMobileWeb = location.search.indexOf("".concat(PLATFORM_PARAM, "=").concat(MOBILE_WEB)) > -1;
   var _navigator = navigator,
       userAgent = _navigator.userAgent;
 
-  if ((userAgent.includes('iPhone') || userAgent.includes('iPad')) && searchParams.get(PLATFORM_PARAM) === MOBILE_WEB) {
+  if ((userAgent.indexOf('iPhone') > -1 || userAgent.indexOf('iPad') > -1) && isMobileWeb) {
     appContainerNode.style.overflowY = 'scroll';
     appContainerNode.style.webkitOverflowScrolling = 'touch';
   }
